@@ -2,6 +2,10 @@
   display: none;
 }
 
+#multiplayer {
+  display: none;
+}
+
 #dice1, #dice2, #dice3, #dice4, #dice5, #dice6 {
   display: none;
   max-width: 200px;
@@ -12,7 +16,7 @@ body {
   background: linear-gradient(0.25turn, rgb(42, 157, 143), rgb(233, 196, 106), rgb(244, 162, 97), rgb(231, 111, 81));
   font-family: 'Bebas Neue';
   background-size: 1000% 1000%;
-  animation: movingBackground 10s alternate infinite;
+  animation: movingBackground 7s alternate infinite;
 }
 
 @keyframes movingBackground {
