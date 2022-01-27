@@ -27,14 +27,6 @@ Player.prototype.endTurn = function() {
 
 //UI LOGIC
 
-function wait(ms)
-{
-    var d = new Date();
-    var d2 = null;
-    do { d2 = new Date(); }
-    while(d2-d < ms);
-}
-
 function computer(){
   setTimeout(function(){
     player2.diceRoll();
@@ -60,8 +52,8 @@ function computer(){
         }
       }, 1000);   
     }
-    }, 1000);
-    console.log(player2); 
+  }, 1000);
+  console.log(player2); 
   $("#buttons2").hide();
   $("#buttons1").show();
 }
