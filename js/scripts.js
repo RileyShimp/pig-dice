@@ -36,13 +36,32 @@ function wait(ms)
 }
 
 function computer(){
-  player2.diceRoll();
-  computerRoll(player2);
-  player2.diceRoll();
-  computerRoll(player2);
-  player2.diceRoll();
-  computerRoll(player2);
-  player2.endTurn();
+  setTimeout(function(){
+    player2.diceRoll();
+    computerRoll(player2);
+    $("#p2Turn").html(player2.turn);
+    console.log(player2);
+    if (player2.turn > 0){
+      setTimeout(function(){
+        player2.diceRoll();
+        computerRoll(player2);
+        $("#p2Turn").html(player2.turn);
+        console.log(player2);
+        if (player2.turn > 0){
+          setTimeout(function(){
+            player2.diceRoll();
+            computerRoll(player2); 
+            $("#p2Turn").html(player2.turn); 
+            player2.endTurn();
+            $("#p2Total").html(player2.total);
+            $("#p2Turn").html(player2.turn); 
+            console.log(player2); 
+          }, 1000);   
+        }
+      }, 1000);   
+    }
+    }, 1000);
+    console.log(player2); 
   $("#buttons2").hide();
   $("#buttons1").show();
 }
@@ -61,8 +80,8 @@ function roll(player) {
     $("#buttons2").toggle();
     if (ai === true) {
       computer();
-      $("#p2Total").html(player2.total);
       $("#p2Turn").html(player2.turn);
+      $("#p2Total").html(player2.total);
     }
   } else if (player.roll === 2) {
     $("#dice2").show();
