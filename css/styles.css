@@ -1,0 +1,77 @@
+#buttons2 {
+  display: none;
+}
+
+#dice1, #dice2, #dice3, #dice4, #dice5, #dice6 {
+  display: none;
+  max-width: 200px;
+  margin: auto;
+}
+
+body {
+  background: linear-gradient(0.25turn, rgb(42, 157, 143), rgb(233, 196, 106), rgb(244, 162, 97), rgb(231, 111, 81));
+  font-family: 'Bebas Neue';
+  background-size: 1000% 1000%;
+  animation: movingBackground 10s alternate infinite;
+}
+
+@keyframes movingBackground {
+  0% {background-position: 0%}
+  25% {background-position: 25%}
+  50% {background-position: 50%}
+  75% {background-position: 75%}
+  100% {background-position: 100%}
+}
+
+.row h1 {
+  border-bottom: solid black 2px;
+}
+
+header {
+  background-color: rgba(255, 250, 245, 0.488);
+  margin-top: 3em;
+  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+  box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.8), 0 16px 30px 0 rgba(0, 0, 0, 0.7);
+}
+
+header:hover {
+  box-shadow: 0 14px 18px 0 rgba(187, 187, 187, 0.68), 0 16px 30px 0 rgba(0, 0, 0, 0.7);
+}
+
+#rowDice:hover {
+  box-shadow: 0 14px 18px 0 rgba(255, 255, 255, 0.68), 0 16px 30px 0 rgba(0, 0, 0, 0.7);
+}
+
+#players:hover {
+  box-shadow: 0 14px 18px 0 rgba(255, 255, 255, 0.68), 0 16px 30px 0 rgba(0, 0, 0, 0.7);
+}
+
+#rowDice {
+  background-color: rgba(255, 250, 245, 0.488);
+  max-width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 200px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-radius: 10%;
+  text-align: center;
+  box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.8), 0 16px 30px 0 rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+#players {
+  background-color: rgba(255, 250, 245, 0.488);
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+  box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.8), 0 16px 30px 0 rgba(0, 0, 0, 0.7);
+}
+
+#player1-wins, #player2-wins {
+  display: none;
+}
