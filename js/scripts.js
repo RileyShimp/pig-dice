@@ -1,4 +1,4 @@
-// Buiness Logic
+// Business Logic
 
 function Player(total, roll, turn) {
   this.total = total;
@@ -87,8 +87,7 @@ function computerRoll(player) {
   $("#rowDice").show();
   if (player.roll === 0) {
     $("#dice1").show();
-    $("#buttons1").toggle();
-    $("#buttons2").toggle();
+    $("#buttons1").show();
   } else if (player.roll === 2) {
     $("#dice2").show();
   } else if (player.roll === 3) {
